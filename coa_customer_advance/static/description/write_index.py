@@ -1,0 +1,822 @@
+
+import os
+
+OUTPUT_PATH = r"C:\Users\user\.gemini\antigravity\scratch\coa_addons_repo\coa_customer_advance\static\description\index.html"
+
+HTML = r"""<div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;color:#1a2535;line-height:1.6;max-width:1100px;margin:0 auto;padding:0;">
+
+<!-- ============================================================
+     SECTION 1 — HERO HEADER
+     ============================================================ -->
+<div style="background:linear-gradient(135deg,#041F33 0%,#063153 55%,#0F5586 100%);border-radius:18px;padding:60px 48px 52px;margin-bottom:36px;position:relative;overflow:hidden;">
+
+  <!-- Background decoration circles -->
+  <div style="position:absolute;top:-80px;right:-80px;width:340px;height:340px;border-radius:50%;background:rgba(15,85,134,0.18);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-60px;left:-60px;width:260px;height:260px;border-radius:50%;background:rgba(6,49,83,0.25);pointer-events:none;"></div>
+
+  <!-- Top Bar: Logo pill + Version badge -->
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
+    <div style="display:flex;align-items:center;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);border-radius:50px;padding:10px 22px 10px 12px;gap:14px;">
+      <img src="coa_logo.jpg" alt="COA Logo" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.3);" />
+      <div>
+        <div style="color:#E7EEF3;font-weight:700;font-size:15px;letter-spacing:0.3px;">COA Business Solutions</div>
+        <div style="color:#6E93B0;font-size:12px;">Egypt &amp; MENA Region</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;background:rgba(0,200,100,0.12);border:1.5px solid rgba(0,220,110,0.35);border-radius:50px;padding:8px 20px;">
+      <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;"></span>
+      <span style="color:#86efac;font-weight:600;font-size:13.5px;letter-spacing:0.5px;">Odoo 19 &middot; 18 &middot; 17 Ready</span>
+    </div>
+  </div>
+
+  <!-- Headline & Subtitle -->
+  <div style="max-width:680px;margin-bottom:44px;">
+    <div style="display:inline-block;background:rgba(140,29,34,0.30);border:1px solid rgba(230,27,33,0.45);border-radius:6px;padding:5px 14px;margin-bottom:18px;">
+      <span style="color:#fca5a5;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">Accounting &mdash; AR Module</span>
+    </div>
+    <h1 style="font-size:42px;font-weight:800;color:#ffffff;line-height:1.18;margin:0 0 18px;letter-spacing:-0.5px;">
+      Customer Advance Payments<br/>
+      <span style="background:linear-gradient(90deg,#60a5fa,#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">with Auto Accounting</span>
+    </h1>
+    <p style="font-size:18px;color:#93b8d8;margin:0;font-weight:400;line-height:1.7;">
+      Register advance &amp; down-payments from customers <em>before</em> invoicing. Automatically posts the liability journal entry, then reconciles it against the invoice with a single click — zero manual effort, zero reconciliation errors.
+    </p>
+  </div>
+
+  <!-- 4 Metric Cards -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:44px;">
+
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 18px;text-align:center;">
+      <div style="font-size:34px;margin-bottom:8px;">&#9889;</div>
+      <div style="color:#ffffff;font-weight:700;font-size:14px;line-height:1.4;">Auto Liability<br/>Entry</div>
+      <div style="color:#6E93B0;font-size:12px;margin-top:6px;">Dr. Bank / Cr. Advance Liability posted instantly</div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 18px;text-align:center;">
+      <div style="font-size:34px;margin-bottom:8px;">&#128327;</div>
+      <div style="color:#ffffff;font-weight:700;font-size:14px;line-height:1.4;">One-Click<br/>Settlement</div>
+      <div style="color:#6E93B0;font-size:12px;margin-top:6px;">Wizard reconciles advance against open invoice</div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 18px;text-align:center;">
+      <div style="font-size:34px;margin-bottom:8px;">&#127758;</div>
+      <div style="color:#ffffff;font-weight:700;font-size:14px;line-height:1.4;">Multi-Currency<br/>Support</div>
+      <div style="color:#6E93B0;font-size:12px;margin-top:6px;">FX gains &amp; losses computed automatically</div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 18px;text-align:center;">
+      <div style="font-size:34px;margin-bottom:8px;">&#128202;</div>
+      <div style="color:#ffffff;font-weight:700;font-size:14px;line-height:1.4;">Full Audit<br/>Trail</div>
+      <div style="color:#6E93B0;font-size:12px;margin-top:6px;">Every entry linked, traceable &amp; reportable</div>
+    </div>
+
+  </div>
+
+  <!-- Mac Browser Screenshot -->
+  <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;overflow:hidden;margin-bottom:36px;">
+    <!-- Browser chrome bar -->
+    <div style="background:rgba(4,31,51,0.80);padding:12px 18px;display:flex;align-items:center;gap:10px;">
+      <span style="width:12px;height:12px;border-radius:50%;background:#E61B21;display:inline-block;"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#f59e0b;display:inline-block;"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+      <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:6px;padding:4px 14px;margin:0 12px;text-align:center;">
+        <span style="color:#6E93B0;font-size:12px;">&#128274; odoo.your-company.com / accounting / customer-advance</span>
+      </div>
+    </div>
+    <!-- Screenshot image -->
+    <img src="01_advance_payment_form.png" alt="Customer Advance Payment Form" style="width:100%;display:block;max-height:420px;object-fit:cover;object-position:top;" />
+  </div>
+
+  <!-- Feature Tags Row -->
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Advance Payment Registration</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Liability Journal Entry</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Settlement Wizard</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Outstanding Credit Match</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Multi-Currency FX</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Full Audit Trail</span>
+    <span style="background:rgba(15,85,134,0.40);border:1px solid rgba(110,147,176,0.40);border-radius:50px;padding:6px 16px;color:#93c5fd;font-size:13px;font-weight:500;">&#10003; Community &amp; Enterprise</span>
+    <span style="background:rgba(140,29,34,0.35);border:1px solid rgba(230,27,33,0.40);border-radius:50px;padding:6px 16px;color:#fca5a5;font-size:13px;font-weight:500;">OPL-1 Licensed</span>
+  </div>
+
+</div><!-- /Hero -->
+
+
+<!-- ============================================================
+     SECTION 2 — PROBLEM VS SOLUTION
+     ============================================================ -->
+<div style="margin-bottom:36px;">
+
+  <!-- Section Label -->
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#E7EEF3;border-radius:6px;padding:5px 16px;margin-bottom:12px;">
+      <span style="color:#0F5586;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Why You Need This Module</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#041F33;margin:0 0 10px;">The Advance Payment Problem &mdash; Solved</h2>
+    <p style="color:#4a6079;font-size:16px;max-width:600px;margin:0 auto;">Managing customer advance payments manually creates accounting chaos. Here is how the module eliminates it entirely.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+
+    <!-- WITHOUT -->
+    <div style="background:#fff5f5;border:1.5px solid #fecaca;border-radius:16px;padding:32px 28px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <div style="width:42px;height:42px;background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;">&#10007;</div>
+        <div>
+          <div style="font-weight:800;font-size:18px;color:#7f1d1d;">Without This Module</div>
+          <div style="color:#ef4444;font-size:13px;">The painful manual way</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;">
+          <span style="color:#dc2626;font-size:18px;line-height:1.2;">&#9888;</span>
+          <div>
+            <div style="font-weight:600;color:#7f1d1d;font-size:14px;">Manual Journal Entries</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">Accountants must manually create Dr./Cr. entries for every advance payment received, wasting hours and introducing typos.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;">
+          <span style="color:#dc2626;font-size:18px;line-height:1.2;">&#9888;</span>
+          <div>
+            <div style="font-weight:600;color:#7f1d1d;font-size:14px;">Reconciliation Errors</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">Matching an advance to an invoice manually across multiple periods leads to misapplication, double-counting and financial misstatements.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;">
+          <span style="color:#dc2626;font-size:18px;line-height:1.2;">&#9888;</span>
+          <div>
+            <div style="font-weight:600;color:#7f1d1d;font-size:14px;">No Tracking or Status</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">No system-level visibility into which advances are outstanding, partially applied or fully settled — only spreadsheets.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;">
+          <span style="color:#dc2626;font-size:18px;line-height:1.2;">&#9888;</span>
+          <div>
+            <div style="font-weight:600;color:#7f1d1d;font-size:14px;">Zero Audit Trail</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">Auditors cannot trace the origin of advance payments back to their source documents, causing compliance failures.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WITH -->
+    <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:16px;padding:32px 28px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <div style="width:42px;height:42px;background:#dcfce7;border:1.5px solid #86efac;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;">&#10003;</div>
+        <div>
+          <div style="font-weight:800;font-size:18px;color:#14532d;">With COA Advance Payments</div>
+          <div style="color:#22c55e;font-size:13px;">Automated, accurate, auditable</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #bbf7d0;border-radius:10px;padding:14px 16px;">
+          <span style="color:#16a34a;font-size:18px;line-height:1.2;">&#9989;</span>
+          <div>
+            <div style="font-weight:600;color:#14532d;font-size:14px;">Automatic Dr./Cr. Journal Entries</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">On confirmation, the system instantly posts Dr. Bank / Cr. Customer Advance Liability with no human intervention required.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #bbf7d0;border-radius:10px;padding:14px 16px;">
+          <span style="color:#16a34a;font-size:18px;line-height:1.2;">&#9989;</span>
+          <div>
+            <div style="font-weight:600;color:#14532d;font-size:14px;">One-Click Settlement</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">The settlement wizard selects the matching invoice and posts Dr. Advance Liability / Cr. Receivable in one click — perfectly balanced.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #bbf7d0;border-radius:10px;padding:14px 16px;">
+          <span style="color:#16a34a;font-size:18px;line-height:1.2;">&#9989;</span>
+          <div>
+            <div style="font-weight:600;color:#14532d;font-size:14px;">Complete Status Tracking</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">Each advance shows real-time status: Draft, Confirmed, Partially Settled, or Fully Settled — visible in list and kanban views.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #bbf7d0;border-radius:10px;padding:14px 16px;">
+          <span style="color:#16a34a;font-size:18px;line-height:1.2;">&#9989;</span>
+          <div>
+            <div style="font-weight:600;color:#14532d;font-size:14px;">Immutable Audit Trail</div>
+            <div style="color:#6b7280;font-size:13px;margin-top:3px;">Every journal entry is linked to its source advance, every settlement is traceable to its invoice — ready for external audits and tax authorities.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /Problem vs Solution -->
+
+
+<!-- ============================================================
+     SECTION 3 — 6 FEATURE PILLARS
+     ============================================================ -->
+<div style="margin-bottom:36px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#E7EEF3;border-radius:6px;padding:5px 16px;margin-bottom:12px;">
+      <span style="color:#0F5586;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Core Capabilities</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#041F33;margin:0 0 10px;">Six Feature Pillars</h2>
+    <p style="color:#4a6079;font-size:16px;max-width:580px;margin:0 auto;">Every aspect of the advance payment lifecycle is handled — from receipt through settlement to reporting.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+
+    <!-- Pillar 1 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);transition:all .2s;">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#128181;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Advance Payment Registration</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">Record advance payments from customers before any invoice is issued. Capture the partner, amount, currency, analytic account, and payment method — all in a dedicated form view linked to the customer record.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Form View</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Partner Link</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Analytic</span>
+      </div>
+    </div>
+
+    <!-- Pillar 2 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#128196;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Automatic Liability Journal Entry</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">Upon confirmation, the module automatically posts the correct double-entry bookkeeping record: <strong>Dr. Bank / Cash Account</strong> and <strong>Cr. Customer Advance Liability Account</strong>. No manual journal creation needed.</p>
+      <div style="display:flex;flex-wrap:gap:7px;gap:7px;flex-wrap:wrap;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Auto-Post</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Double-Entry</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Configurable Accounts</span>
+      </div>
+    </div>
+
+    <!-- Pillar 3 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#128295;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Invoice Settlement Wizard</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">When the invoice is ready, open the settlement wizard from the advance record. Select the target invoice, confirm the amount to apply, and click Settle. The wizard handles partial and full settlement scenarios automatically.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Wizard UI</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Partial Settlement</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Validation</span>
+      </div>
+    </div>
+
+    <!-- Pillar 4 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#128260;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Outstanding Credit Reconciliation</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">The settlement process leverages Odoo's native outstanding credit mechanism, posting Dr. Advance Liability / Cr. Accounts Receivable and marking the journal items as reconciled — ensuring your trial balance is always clean.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">AR Reconciliation</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Clean Trial Balance</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Native Engine</span>
+      </div>
+    </div>
+
+    <!-- Pillar 5 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#127760;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Multi-Currency Support</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">Record advances in any currency enabled in Odoo. The module automatically computes foreign exchange (FX) gains and losses at settlement time based on the exchange rate difference between the advance date and invoice date.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">FX Gain / Loss</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Rate Auto-Fetch</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Any Currency</span>
+      </div>
+    </div>
+
+    <!-- Pillar 6 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;">&#128202;</div>
+      <h3 style="font-size:17px;font-weight:700;color:#041F33;margin:0 0 10px;">Complete Audit Trail</h3>
+      <p style="color:#4a6079;font-size:14px;margin:0 0 16px;line-height:1.65;">Every advance is linked to its originating payment, its journal entry, and every settlement invoice. The chatter records all state changes with timestamps and user identifiers — giving auditors full traceability from cash receipt to final invoice.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Chatter Log</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Document Links</span>
+        <span style="background:#E7EEF3;border-radius:50px;padding:3px 12px;font-size:12px;color:#0F5586;font-weight:500;">Timestamp</span>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /Feature Pillars -->
+
+
+<!-- ============================================================
+     SECTION 4 — 4-STEP ACCOUNTING WORKFLOW PIPELINE
+     ============================================================ -->
+<div style="background:linear-gradient(135deg,#041F33 0%,#063153 100%);border-radius:18px;padding:52px 44px;margin-bottom:36px;position:relative;overflow:hidden;">
+
+  <!-- Decoration -->
+  <div style="position:absolute;top:-40px;right:-40px;width:280px;height:280px;border-radius:50%;background:rgba(15,85,134,0.12);pointer-events:none;"></div>
+
+  <div style="text-align:center;margin-bottom:44px;">
+    <div style="display:inline-block;background:rgba(110,147,176,0.20);border:1px solid rgba(110,147,176,0.35);border-radius:6px;padding:5px 16px;margin-bottom:14px;">
+      <span style="color:#93c5fd;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Accounting Workflow</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#ffffff;margin:0 0 10px;">4-Step Accounting Pipeline</h2>
+    <p style="color:#6E93B0;font-size:16px;max-width:580px;margin:0 auto;">From cash received to invoice settled — every double-entry automatically generated and reconciled.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;">
+
+    <!-- Connector line behind cards -->
+    <div style="position:absolute;top:52px;left:12.5%;right:12.5%;height:3px;background:linear-gradient(90deg,#0F5586,#6E93B0,#0F5586,#22c55e);border-radius:2px;z-index:0;"></div>
+
+    <!-- Step 1 -->
+    <div style="position:relative;z-index:1;padding:0 10px;">
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border:3px solid #6E93B0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff;margin:0 auto;">1</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 16px;">
+        <div style="font-weight:700;font-size:14px;color:#ffffff;margin-bottom:8px;text-align:center;">Register Advance Payment</div>
+        <div style="color:#6E93B0;font-size:12.5px;text-align:center;margin-bottom:16px;line-height:1.55;">Customer pays before invoice. Accountant records the advance in Odoo.</div>
+        <!-- Dr/Cr Entry -->
+        <div style="background:rgba(4,31,51,0.50);border-radius:10px;padding:14px 12px;">
+          <div style="font-family:monospace;font-size:12px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="color:#86efac;font-weight:700;">Dr.</span>
+              <span style="color:#d1fae5;flex:1;padding:0 8px;">Bank / Cash</span>
+              <span style="color:#86efac;font-weight:600;">+Amount</span>
+            </div>
+            <div style="border-top:1px dashed rgba(110,147,176,0.30);margin:8px 0;"></div>
+            <div style="display:flex;justify-content:space-between;">
+              <span style="color:#fca5a5;font-weight:700;">Cr.</span>
+              <span style="color:#fee2e2;flex:1;padding:0 8px;">Advance Liability</span>
+              <span style="color:#fca5a5;font-weight:600;">+Amount</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div style="position:relative;z-index:1;padding:0 10px;">
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border:3px solid #6E93B0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff;margin:0 auto;">2</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 16px;">
+        <div style="font-weight:700;font-size:14px;color:#ffffff;margin-bottom:8px;text-align:center;">Create Customer Invoice</div>
+        <div style="color:#6E93B0;font-size:12.5px;text-align:center;margin-bottom:16px;line-height:1.55;">Goods or services delivered. Standard Odoo invoice is confirmed and posted.</div>
+        <!-- Dr/Cr Entry -->
+        <div style="background:rgba(4,31,51,0.50);border-radius:10px;padding:14px 12px;">
+          <div style="font-family:monospace;font-size:12px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="color:#86efac;font-weight:700;">Dr.</span>
+              <span style="color:#d1fae5;flex:1;padding:0 8px;">Accounts Receivable</span>
+              <span style="color:#86efac;font-weight:600;">+Amount</span>
+            </div>
+            <div style="border-top:1px dashed rgba(110,147,176,0.30);margin:8px 0;"></div>
+            <div style="display:flex;justify-content:space-between;">
+              <span style="color:#fca5a5;font-weight:700;">Cr.</span>
+              <span style="color:#fee2e2;flex:1;padding:0 8px;">Revenue Account</span>
+              <span style="color:#fca5a5;font-weight:600;">+Amount</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div style="position:relative;z-index:1;padding:0 10px;">
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#0F5586,#063153);border:3px solid #6E93B0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff;margin:0 auto;">3</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:22px 16px;">
+        <div style="font-weight:700;font-size:14px;color:#ffffff;margin-bottom:8px;text-align:center;">One-Click Settlement</div>
+        <div style="color:#6E93B0;font-size:12.5px;text-align:center;margin-bottom:16px;line-height:1.55;">Wizard selected, invoice chosen, amount confirmed. System posts the transfer entry.</div>
+        <!-- Dr/Cr Entry -->
+        <div style="background:rgba(4,31,51,0.50);border-radius:10px;padding:14px 12px;">
+          <div style="font-family:monospace;font-size:12px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="color:#86efac;font-weight:700;">Dr.</span>
+              <span style="color:#d1fae5;flex:1;padding:0 8px;">Advance Liability</span>
+              <span style="color:#86efac;font-weight:600;">+Amount</span>
+            </div>
+            <div style="border-top:1px dashed rgba(110,147,176,0.30);margin:8px 0;"></div>
+            <div style="display:flex;justify-content:space-between;">
+              <span style="color:#fca5a5;font-weight:700;">Cr.</span>
+              <span style="color:#fee2e2;flex:1;padding:0 8px;">Accounts Receivable</span>
+              <span style="color:#fca5a5;font-weight:600;">+Amount</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div style="position:relative;z-index:1;padding:0 10px;">
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#22c55e,#16a34a);border:3px solid #86efac;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff;margin:0 auto;">&#10003;</div>
+      </div>
+      <div style="background:rgba(34,197,94,0.10);border:1px solid rgba(134,239,172,0.25);border-radius:14px;padding:22px 16px;">
+        <div style="font-weight:700;font-size:14px;color:#86efac;margin-bottom:8px;text-align:center;">Automatic Reconciliation</div>
+        <div style="color:#6E93B0;font-size:12.5px;text-align:center;margin-bottom:16px;line-height:1.55;">Journal items are auto-reconciled. Invoice turns green. Advance marked Settled. Audit complete.</div>
+        <!-- Status -->
+        <div style="background:rgba(4,31,51,0.50);border-radius:10px;padding:14px 12px;text-align:center;">
+          <div style="color:#86efac;font-size:13px;font-weight:700;margin-bottom:8px;">&#9989; Invoice: PAID</div>
+          <div style="color:#86efac;font-size:13px;font-weight:700;margin-bottom:8px;">&#9989; Advance: SETTLED</div>
+          <div style="color:#6E93B0;font-size:11px;">Trial balance: &#9989; balanced</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /Workflow Pipeline -->
+
+
+<!-- ============================================================
+     SECTION 5 — LIVE SCREENSHOTS SHOWCASE
+     ============================================================ -->
+<div style="margin-bottom:36px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#E7EEF3;border-radius:6px;padding:5px 16px;margin-bottom:12px;">
+      <span style="color:#0F5586;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Screenshots</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#041F33;margin:0 0 10px;">See It In Action</h2>
+    <p style="color:#4a6079;font-size:16px;max-width:560px;margin:0 auto;">Real screenshots from the module running in Odoo 18 Community Edition.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+
+    <!-- Screenshot 1 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(4,31,51,0.08);">
+      <div style="padding:18px 22px 14px;border-bottom:1px solid #E7EEF3;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:4px;">Advance Payment Form</div>
+            <div style="color:#6b7280;font-size:13px;">Create and confirm a new customer advance</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:#dbeafe;color:#1e40af;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Form View</span>
+            <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Auto-Entry</span>
+          </div>
+        </div>
+      </div>
+      <img src="01_advance_payment_form.png" alt="Advance Payment Form" style="width:100%;display:block;max-height:280px;object-fit:cover;object-position:top;" />
+      <div style="padding:14px 22px;">
+        <p style="color:#4a6079;font-size:13.5px;margin:0;line-height:1.6;">The advance payment form allows you to register the customer, amount, journal, and analytic data. Upon confirmation, the liability journal entry is posted automatically.</p>
+      </div>
+    </div>
+
+    <!-- Screenshot 2 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(4,31,51,0.08);">
+      <div style="padding:18px 22px 14px;border-bottom:1px solid #E7EEF3;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:4px;">Settlement Wizard</div>
+            <div style="color:#6b7280;font-size:13px;">Select invoice and settle with one click</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Wizard</span>
+            <span style="background:#f3e8ff;color:#6d28d9;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Smart Match</span>
+          </div>
+        </div>
+      </div>
+      <img src="02_settlement_wizard.png" alt="Settlement Wizard" style="width:100%;display:block;max-height:280px;object-fit:cover;object-position:top;" />
+      <div style="padding:14px 22px;">
+        <p style="color:#4a6079;font-size:13.5px;margin:0;line-height:1.6;">The settlement wizard lists all open invoices for the customer. Select the invoice, specify partial or full amount, and click Settle. The system handles the double-entry and reconciliation instantly.</p>
+      </div>
+    </div>
+
+    <!-- Screenshot 3 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(4,31,51,0.08);">
+      <div style="padding:18px 22px 14px;border-bottom:1px solid #E7EEF3;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:4px;">Invoice with Advance Applied</div>
+            <div style="color:#6b7280;font-size:13px;">Invoice showing settled advance credit</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Reconciled</span>
+            <span style="background:#dbeafe;color:#1e40af;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Invoice View</span>
+          </div>
+        </div>
+      </div>
+      <img src="03_invoice_with_advance.png" alt="Invoice with Advance Applied" style="width:100%;display:block;max-height:280px;object-fit:cover;object-position:top;" />
+      <div style="padding:14px 22px;">
+        <p style="color:#4a6079;font-size:13.5px;margin:0;line-height:1.6;">After settlement the invoice displays the advance as an outstanding credit that has been applied. The outstanding amount is reduced accordingly and the invoice status updates automatically.</p>
+      </div>
+    </div>
+
+    <!-- Screenshot 4 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(4,31,51,0.08);">
+      <div style="padding:18px 22px 14px;border-bottom:1px solid #E7EEF3;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:4px;">Advance Payments List View</div>
+            <div style="color:#6b7280;font-size:13px;">Dashboard of all advances with status tracking</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:#E7EEF3;color:#0F5586;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">List View</span>
+            <span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;">Status Tracking</span>
+          </div>
+        </div>
+      </div>
+      <img src="04_advance_list.png" alt="Advance Payments List" style="width:100%;display:block;max-height:280px;object-fit:cover;object-position:top;" />
+      <div style="padding:14px 22px;">
+        <p style="color:#4a6079;font-size:13.5px;margin:0;line-height:1.6;">The list view provides a complete dashboard of all customer advance payments — filterable by status (Draft, Confirmed, Partially Settled, Settled), customer, date range, and currency. Export to Excel for reporting.</p>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /Screenshots -->
+
+
+<!-- ============================================================
+     SECTION 6 — TECHNICAL SPECS TABLE
+     ============================================================ -->
+<div style="margin-bottom:36px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#E7EEF3;border-radius:6px;padding:5px 16px;margin-bottom:12px;">
+      <span style="color:#0F5586;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Technical Information</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#041F33;margin:0 0 10px;">Module Specifications</h2>
+    <p style="color:#4a6079;font-size:16px;max-width:520px;margin:0 auto;">Everything your IT team and implementation partner needs to know before installation.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+
+    <!-- Specs Table -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+      <div style="background:linear-gradient(135deg,#041F33,#063153);padding:20px 24px;">
+        <div style="font-weight:700;font-size:16px;color:#ffffff;">Module Details</div>
+        <div style="color:#6E93B0;font-size:13px;margin-top:4px;">Core identification and compatibility</div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tbody>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;width:42%;background:#f9fafb;">Module Name</td>
+            <td style="padding:14px 20px;color:#041F33;font-size:13.5px;font-weight:500;">COA Customer Advance Payments</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Technical ID</td>
+            <td style="padding:14px 20px;font-size:13.5px;"><code style="background:#E7EEF3;color:#0F5586;padding:2px 8px;border-radius:5px;font-size:13px;font-family:monospace;">coa_customer_advance</code></td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Odoo Versions</td>
+            <td style="padding:14px 20px;font-size:13.5px;">
+              <span style="background:#dbeafe;color:#1e40af;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;margin-right:5px;">v17</span>
+              <span style="background:#dbeafe;color:#1e40af;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;margin-right:5px;">v18</span>
+              <span style="background:#dbeafe;color:#1e40af;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;">v19</span>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Editions</td>
+            <td style="padding:14px 20px;font-size:13.5px;">
+              <span style="background:#dcfce7;color:#15803d;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;margin-right:5px;">Community</span>
+              <span style="background:#f3e8ff;color:#6d28d9;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;">Enterprise</span>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Dependencies</td>
+            <td style="padding:14px 20px;font-size:13.5px;">
+              <code style="background:#E7EEF3;color:#0F5586;padding:2px 8px;border-radius:5px;font-size:12px;font-family:monospace;margin-right:5px;">account</code>
+              <code style="background:#E7EEF3;color:#0F5586;padding:2px 8px;border-radius:5px;font-size:12px;font-family:monospace;">sale_management</code>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">License</td>
+            <td style="padding:14px 20px;font-size:13.5px;">
+              <span style="background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:700;">OPL-1</span>
+              <span style="color:#6b7280;font-size:12px;margin-left:8px;">Odoo Proprietary License</span>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #E7EEF3;">
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Languages</td>
+            <td style="padding:14px 20px;font-size:13.5px;">
+              <span style="background:#dbeafe;color:#1e40af;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;margin-right:5px;">&#127468;&#127463; English</span>
+              <span style="background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:50px;font-size:12px;font-weight:600;">&#127462;&#127466; Arabic</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;font-weight:600;color:#4a6079;font-size:13.5px;background:#f9fafb;">Author / Publisher</td>
+            <td style="padding:14px 20px;color:#041F33;font-size:13.5px;font-weight:600;">COA Business Solutions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Compatibility & Requirements -->
+    <div style="display:flex;flex-direction:column;gap:18px;">
+
+      <!-- Accounting Standards Box -->
+      <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+        <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:6px;">&#128203; Accounting Standards Compliance</div>
+        <div style="color:#4a6079;font-size:13.5px;margin-bottom:16px;">The module follows internationally recognized accounting standards for deferred revenue and advance receipts.</div>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;">
+            <span style="color:#22c55e;font-size:16px;">&#10003;</span>
+            <span style="color:#14532d;font-size:13.5px;font-weight:500;">IFRS 15 — Revenue Recognition Compliant</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;">
+            <span style="color:#22c55e;font-size:16px;">&#10003;</span>
+            <span style="color:#14532d;font-size:13.5px;font-weight:500;">IAS 32 — Financial Instruments Classification</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;">
+            <span style="color:#22c55e;font-size:16px;">&#10003;</span>
+            <span style="color:#14532d;font-size:13.5px;font-weight:500;">Egyptian Accounting Standards (EAS) Ready</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;">
+            <span style="color:#22c55e;font-size:16px;">&#10003;</span>
+            <span style="color:#14532d;font-size:13.5px;font-weight:500;">GCC VAT Regulations Compatible</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Installation Box -->
+      <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(4,31,51,0.06);">
+        <div style="font-weight:700;font-size:15px;color:#041F33;margin-bottom:6px;">&#9889; Quick Installation</div>
+        <div style="color:#4a6079;font-size:13.5px;margin-bottom:16px;">Standard Odoo app installation — no server-side configuration required.</div>
+        <div style="background:#f9fafb;border:1px solid #E7EEF3;border-radius:10px;padding:14px 16px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:26px;height:26px;background:#041F33;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;">1</div>
+              <span style="color:#041F33;font-size:13.5px;">Apps menu &rarr; search <code style="background:#E7EEF3;color:#0F5586;padding:1px 6px;border-radius:4px;font-size:12px;">coa_customer_advance</code></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:26px;height:26px;background:#041F33;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;">2</div>
+              <span style="color:#041F33;font-size:13.5px;">Click Install &mdash; dependencies auto-resolved</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:26px;height:26px;background:#041F33;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;">3</div>
+              <span style="color:#041F33;font-size:13.5px;">Configure advance liability account in Accounting &rarr; Settings</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:26px;height:26px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0;">&#10003;</div>
+              <span style="color:#15803d;font-size:13.5px;font-weight:600;">Ready to use — no restart required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /Technical Specs -->
+
+
+<!-- ============================================================
+     SECTION 7 — FAQ
+     ============================================================ -->
+<div style="margin-bottom:36px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#E7EEF3;border-radius:6px;padding:5px 16px;margin-bottom:12px;">
+      <span style="color:#0F5586;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">FAQ</span>
+    </div>
+    <h2 style="font-size:30px;font-weight:800;color:#041F33;margin:0 0 10px;">Frequently Asked Questions</h2>
+    <p style="color:#4a6079;font-size:16px;max-width:520px;margin:0 auto;">Answers to the most common questions from accountants and implementation consultants.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:18px;">
+
+    <!-- Q1 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(4,31,51,0.05);">
+      <div style="background:linear-gradient(90deg,#E7EEF3,#ffffff);padding:18px 24px;border-bottom:1px solid #E7EEF3;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">Q</div>
+        <div style="font-weight:700;font-size:15.5px;color:#041F33;line-height:1.4;">What happens when a customer pays an advance before the invoice is issued? Can Odoo track this without the module?</div>
+      </div>
+      <div style="padding:18px 24px;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">A</div>
+        <div style="color:#4a6079;font-size:14px;line-height:1.7;">
+          In standard Odoo (without this module), you would need to manually create a journal entry to debit the bank account and credit a liability account of your choice — there is no dedicated advance payment document or workflow. This means no status tracking, no linkage to future invoices, and no automated settlement. The <strong>COA Customer Advance Payments</strong> module introduces a dedicated <em>Advance Payment</em> model with its own form, list view, status machine (Draft &rarr; Confirmed &rarr; Settled), and automatic journal entry generation — eliminating all manual steps and ensuring the advance is properly tracked as a liability until the delivery obligation is fulfilled.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(4,31,51,0.05);">
+      <div style="background:linear-gradient(90deg,#E7EEF3,#ffffff);padding:18px 24px;border-bottom:1px solid #E7EEF3;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">Q</div>
+        <div style="font-weight:700;font-size:15.5px;color:#041F33;line-height:1.4;">What are the exact accounting entries generated by the module, and which accounts are used?</div>
+      </div>
+      <div style="padding:18px 24px;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">A</div>
+        <div style="color:#4a6079;font-size:14px;line-height:1.7;">
+          The module generates two journal entries during the lifecycle of an advance:
+          <br/><br/>
+          <strong>1. On Advance Confirmation:</strong><br/>
+          <code style="background:#E7EEF3;color:#041F33;padding:4px 10px;border-radius:6px;font-size:13px;display:inline-block;margin:4px 0;">Dr. Bank / Cash Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Advance Amount]</code><br/>
+          <code style="background:#E7EEF3;color:#041F33;padding:4px 10px;border-radius:6px;font-size:13px;display:inline-block;margin:4px 0;">Cr. Customer Advance Liability &nbsp;[Advance Amount]</code><br/><br/>
+          <strong>2. On Settlement (via Wizard):</strong><br/>
+          <code style="background:#E7EEF3;color:#041F33;padding:4px 10px;border-radius:6px;font-size:13px;display:inline-block;margin:4px 0;">Dr. Customer Advance Liability &nbsp;[Settlement Amount]</code><br/>
+          <code style="background:#E7EEF3;color:#041F33;padding:4px 10px;border-radius:6px;font-size:13px;display:inline-block;margin:4px 0;">Cr. Accounts Receivable &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Settlement Amount]</code><br/><br/>
+          The <em>Customer Advance Liability</em> account and <em>Bank/Cash</em> account are configurable in Accounting &rarr; Settings. The <em>Accounts Receivable</em> account is taken from the customer's account payable/receivable property. If multi-currency is used, an additional FX gain or loss line may be generated automatically.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div style="background:#ffffff;border:1.5px solid #E7EEF3;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(4,31,51,0.05);">
+      <div style="background:linear-gradient(90deg,#E7EEF3,#ffffff);padding:18px 24px;border-bottom:1px solid #E7EEF3;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#0F5586,#063153);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">Q</div>
+        <div style="font-weight:700;font-size:15.5px;color:#041F33;line-height:1.4;">Can one advance payment be settled against multiple invoices, or can one invoice receive multiple advance payments?</div>
+      </div>
+      <div style="padding:18px 24px;display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;">A</div>
+        <div style="color:#4a6079;font-size:14px;line-height:1.7;">
+          Yes — the module fully supports both scenarios. <strong>Partial settlement</strong> allows a single advance to be applied across multiple invoices over time: each settlement run reduces the advance remaining balance, and the advance status changes from <em>Confirmed</em> to <em>Partially Settled</em> until the balance reaches zero, at which point it becomes <em>Fully Settled</em>. Similarly, a single invoice can have multiple advances applied to it — for example, a 30% advance and a 20% advance from the same customer — and the settlement wizard will show all outstanding advances available for that partner. The remaining invoice balance is updated after each settlement, and the audit trail records every settlement event with date, amount, and the target invoice reference.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /FAQ -->
+
+
+<!-- ============================================================
+     SECTION 8 — FOOTER CTA
+     ============================================================ -->
+<div style="background:linear-gradient(135deg,#041F33 0%,#063153 55%,#0F5586 100%);border-radius:18px;padding:52px 48px;text-align:center;position:relative;overflow:hidden;">
+
+  <!-- Decoration circles -->
+  <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:320px;height:320px;border-radius:50%;background:rgba(15,85,134,0.15);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;right:-40px;width:260px;height:260px;border-radius:50%;background:rgba(6,49,83,0.20);pointer-events:none;"></div>
+
+  <div style="position:relative;z-index:1;">
+
+    <!-- COA Logo -->
+    <div style="display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);border-radius:50px;padding:10px 24px 10px 12px;gap:14px;margin-bottom:28px;">
+      <img src="coa_logo.jpg" alt="COA Logo" style="width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.30);" />
+      <div style="text-align:left;">
+        <div style="color:#ffffff;font-weight:800;font-size:16px;">COA Business Solutions</div>
+        <div style="color:#6E93B0;font-size:12.5px;">Odoo Gold Partner &mdash; Egypt &amp; MENA</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:34px;font-weight:800;color:#ffffff;margin:0 0 16px;line-height:1.2;">
+      Ready to Eliminate Manual<br/>Advance Payment Errors?
+    </h2>
+    <p style="color:#93b8d8;font-size:17px;max-width:560px;margin:0 auto 36px;line-height:1.7;">
+      Install the module today and let COA Business Solutions handle your customer advance accounting automatically — from first payment to final settlement.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:44px;">
+      <a href="https://www.coa-egy.com" style="display:inline-block;background:linear-gradient(135deg,#E61B21,#8C1D22);color:#ffffff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;text-decoration:none;letter-spacing:0.3px;">&#128640; Visit Our Website</a>
+      <a href="mailto:info@coa-egy.com" style="display:inline-block;background:rgba(255,255,255,0.10);border:1.5px solid rgba(255,255,255,0.30);color:#ffffff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;text-decoration:none;letter-spacing:0.3px;">&#128231; Contact Support</a>
+    </div>
+
+    <!-- Contact Info Row -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.12);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:20px;">&#128231;</span>
+        <div>
+          <div style="color:#6E93B0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;">Support Email</div>
+          <a href="mailto:info@coa-egy.com" style="color:#93c5fd;font-size:14px;font-weight:600;text-decoration:none;">info@coa-egy.com</a>
+        </div>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(255,255,255,0.15);"></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:20px;">&#127758;</span>
+        <div>
+          <div style="color:#6E93B0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;">Website</div>
+          <a href="https://www.coa-egy.com" style="color:#93c5fd;font-size:14px;font-weight:600;text-decoration:none;">www.coa-egy.com</a>
+        </div>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(255,255,255,0.15);"></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:20px;">&#128205;</span>
+        <div>
+          <div style="color:#6E93B0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;">Region</div>
+          <span style="color:#e2e8f0;font-size:14px;font-weight:500;">Egypt &amp; MENA Region</span>
+        </div>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(255,255,255,0.15);"></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:20px;">&#128196;</span>
+        <div>
+          <div style="color:#6E93B0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;">License</div>
+          <span style="color:#fde68a;font-size:14px;font-weight:700;">OPL-1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div style="margin-top:28px;">
+      <p style="color:#4a6079;font-size:12.5px;margin:0;">&copy; 2024&ndash;2026 COA Business Solutions. All rights reserved. &mdash; <span style="color:#6E93B0;">coa_customer_advance</span> is licensed under OPL-1.</p>
+    </div>
+
+  </div>
+</div><!-- /Footer CTA -->
+
+</div><!-- /root wrapper -->
+"""
+
+with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
+    f.write(HTML)
+
+print(f"File written: {OUTPUT_PATH}")
+print(f"Size: {os.path.getsize(OUTPUT_PATH):,} bytes")
+
+# Verify no BOM
+with open(OUTPUT_PATH, 'rb') as f:
+    first_bytes = f.read(4)
+print(f"First 4 bytes (hex): {first_bytes.hex()}")
+if first_bytes[:3] == b'\xef\xbb\xbf':
+    print("ERROR: BOM detected!")
+else:
+    print("OK: No BOM detected.")
+
+# Print first 5 lines
+print("\n--- First 5 lines ---")
+with open(OUTPUT_PATH, 'r', encoding='utf-8') as f:
+    for i, line in enumerate(f):
+        if i >= 5:
+            break
+        print(repr(line))

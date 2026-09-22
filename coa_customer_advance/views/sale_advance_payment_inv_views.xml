@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_advance_payment_inv_cash" model="ir.ui.view">
+        <field name="name">sale.advance.payment.inv.cash</field>
+        <field name="model">sale.advance.payment.inv</field>
+        <field name="inherit_id" ref="sale.view_sale_advance_payment_inv"/>
+        <field name="arch" type="xml">
+            <field name="advance_payment_method" position="after">
+                <field name="cash_advance_currency_id" invisible="1"/>
+                <field name="cash_advance_type"
+                       widget="radio"
+                       invisible="advance_payment_method != 'cash_advance'"
+                       required="advance_payment_method == 'cash_advance'"/>
+                <field name="cash_advance_percentage"
+                       invisible="advance_payment_method != 'cash_advance' or cash_advance_type != 'percentage'"
+                       required="advance_payment_method == 'cash_advance' and cash_advance_type == 'percentage'"/>
+                <field name="cash_advance_fixed"
+                       invisible="advance_payment_method != 'cash_advance' or cash_advance_type != 'fixed'"
+                       required="advance_payment_method == 'cash_advance' and cash_advance_type == 'fixed'"/>
+                <field name="advance_journal_id"
+                       invisible="advance_payment_method != 'cash_advance'"
+                       required="advance_payment_method == 'cash_advance'"/>
+                <field name="advance_payment_date"
+                       invisible="advance_payment_method != 'cash_advance'"
+                       required="advance_payment_method == 'cash_advance'"/>
+            </field>
+        </field>
+    </record>
+</odoo>
